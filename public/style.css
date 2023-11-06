@@ -56,3 +56,24 @@ body{
 button:hover {
     color: #fff;
 }
+
+#navBar{
+    margin-top: 80px;
+    list-style: none;
+    display: flex;
+}
+
+#navBar li{
+    margin: 10px;
+}
+
+#navBar li a {
+    font-size: larger;
+    text-decoration: none;
+    color: #000;
+    transition: 0.5s;
+}
+
+#navBar li a:hover{
+    color: #fff;
+}
