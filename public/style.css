@@ -11,6 +11,7 @@ body{
 } 
 
 .header {
+    position: relative;
     display: flex;
     background-color: #a5bce4;
     align-items: center;
@@ -76,4 +77,52 @@ button:hover {
 
 #navBar li a:hover{
     color: #fff;
+}
+
+#div_bannerJogo{  
+    position: relative;  
+    height: 2000px;
+}
+#div_bannerJogo #bg{
+    height: 2000px;
+    object-fit: fill;
+}
+
+#caixaTexto{
+    top: 10%;
+    left: 25%;
+    position: absolute;
+    z-index: 3;
+    width: 50%;
+    height: 30%;
+    background:linear-gradient(180deg, rgba(255, 255, 255, 0.60) 0%, rgba(255, 255, 255, 0.40) 50%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#containerLogo {
+    top: 50%;
+    position: absolute;
+    z-index: 3;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    left: 31%;
+   
+}
+
+#caixaTextoJogo{
+    top: 65%;
+    left: 25%;
+    position: absolute;
+    z-index: 3;
+    width: 50%;
+    height: 20%;
+    background:linear-gradient(360deg, rgba(255, 255, 255, 0.60) 0%, rgba(255, 255, 255, 0.40) 50%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
 }
