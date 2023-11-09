@@ -82,10 +82,13 @@ button:hover {
 #div_bannerJogo{  
     position: relative;  
     height: 2000px;
+    display: flex;
+    justify-content: center;
 }
 #div_bannerJogo #bg{
     height: 2000px;
     object-fit: fill;
+    display: flex;
 }
 
 #caixaTexto{
@@ -103,14 +106,19 @@ button:hover {
 }
 
 #containerLogo {
-    top: 50%;
+    top: 45%;
     position: absolute;
     z-index: 3;
     width: fit-content;
     display: flex;
     align-items: center;
-    left: 31%;
+    justify-content: center;
    
+}
+
+.logoSV {
+    justify-content: center;
+    justify-self: center;
 }
 
 #caixaTextoJogo{
