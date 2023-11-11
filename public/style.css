@@ -115,11 +115,22 @@ button:hover {
 
 #containerTextoCriador p {
     font-weight: bold;
-    font-size: x-large;
+    font-size: 120%;
+}
+
+#containerP {
+    overflow-y: auto;
+    height: 400px;
+    
 }
 
 #imagemCriador {
     margin-right: 10px;
+    
+    
+}
+
+#imagemCriador img {
     border-width: 10px;
     border-style: solid;
     border-color: #a5bce4;
@@ -160,18 +171,24 @@ button:hover {
 
 #containerTextoJogo {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-betweens;
     margin: 25px;
     margin-top: 7%;
+    
 }
 
 #containerTextoJogo p {
     font-weight: bold;
-    font-size: large;
+    font-size: 90%;
+    margin-right: 15px;
 }
 
 #imagemJogo {
     margin-right: 10px;
+    
+}
+
+#imagemJogo img {
     border-width: 10px;
     border-style: solid;
     border-color: #a5bce4;
