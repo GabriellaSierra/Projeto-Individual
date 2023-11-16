@@ -83,6 +83,8 @@ button:hover {
     position: relative;  
     height: 2000px;
     display: flex;
+    align-items: center;
+    align-content: center;
     justify-content: center;
 }
 #div_bannerJogo #bg{
@@ -97,12 +99,43 @@ button:hover {
     position: absolute;
     z-index: 3;
     width: 50%;
-    height: 30%;
+    height: 40%;
     background:linear-gradient(180deg, rgba(255, 255, 255, 0.60) 0%, rgba(255, 255, 255, 0.40) 50%, rgba(255, 255, 255, 0) 100%);
     border-radius: 10px;
     text-align: center;
     display: flex;
     flex-direction: column;
+}
+
+#containerTextoCriador {
+    display: flex;
+    justify-content: space-around;
+    margin: 25px;
+    margin-top: 7%;
+}
+
+#containerTextoCriador p {
+    font-weight: bold;
+    font-size: 120%;
+}
+
+#containerP {
+    overflow-y: auto;
+    height: 400px;
+    
+}
+
+#imagemCriador {
+    margin-right: 10px;
+    
+    
+}
+
+#imagemCriador img {
+    border-width: 10px;
+    border-style: solid;
+    border-color: #a5bce4;
+    border-radius: 15px;
 }
 
 #containerLogo {
@@ -111,9 +144,12 @@ button:hover {
     z-index: 3;
     width: fit-content;
     display: flex;
-    align-items: center;
     justify-content: center;
-   
+    
+}
+
+#containerLogo img {
+    width: 80%;
 }
 
 .logoSV {
@@ -127,10 +163,40 @@ button:hover {
     position: absolute;
     z-index: 3;
     width: 50%;
-    height: 20%;
+    height: 30%;
     background:linear-gradient(360deg, rgba(255, 255, 255, 0.60) 0%, rgba(255, 255, 255, 0.40) 50%, rgba(255, 255, 255, 0) 100%);
     border-radius: 10px;
     text-align: center;
     display: flex;
     flex-direction: column;
+}
+
+#caixaTextoJogo h1 {
+    margin-top: 10%;
+}
+
+#containerTextoJogo {
+    display: flex;
+    justify-content: space-betweens;
+    margin: 25px;
+    margin-top: 7%;
+    
+}
+
+#containerTextoJogo p {
+    font-weight: bold;
+    font-size: 90%;
+    margin-right: 15px;
+}
+
+#imagemJogo {
+    margin-right: 10px;
+    
+}
+
+#imagemJogo img {
+    border-width: 10px;
+    border-style: solid;
+    border-color: #a5bce4;
+    border-radius: 15px;
 }
