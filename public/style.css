@@ -19,16 +19,16 @@ body{
     padding-right: 20px;
 }
 
-.header h1 {
+.header h2 {
     margin-left: 20px;
     margin-top: 0;
     justify-content: center;
 }
 
 .header img {
-    width: 70px;
-    height: 80px;
-    margin-left: 90px;
+    width: 80px;
+    height: 90px;
+    margin-left: 55px;
 }
 
 .botoesCadastroLogin {
@@ -199,4 +199,84 @@ button:hover {
     border-style: solid;
     border-color: #a5bce4;
     border-radius: 15px;
+}
+
+.footer{
+    display: flex;
+    background-color: #a5bce4;
+    justify-content: space-between;
+
+}
+
+.footer img{
+    width: 80px;
+    height: 90px;
+    margin-left: 55px;
+}
+
+.footer h2 {
+    margin-left: 20px;
+    margin: 0px;
+    justify-content: center;
+}
+
+#redeSocial{
+    display: flex;
+    align-items: center;
+}
+
+.imgRedes img{
+    width: 60px;
+    margin-left: 20px;
+}
+
+#imgLinkedin{
+    width: 50px;
+}
+
+.sobreCriadora {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: beige;
+}
+
+.textoCriadora{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#imgCriadora{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.containerTextoCriadora {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 70%;
+    height: 40%;
+    background-color: indianred;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.containerTextoCriadora p {
+    font-weight: bold;
+    font-size: 120%;
+}
+
+.arbustos{
+    margin: 0px;
+}
+
+.arbustos img{
+    width: 300px;
+    margin: 0px;
 }
