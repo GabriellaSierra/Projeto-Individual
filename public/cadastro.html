@@ -34,46 +34,66 @@
             <div class="cadastroLogin">
                 <div class="colunaLogin">
                     <h2 class="tituloLogin">Olá, fazendeiro!</h2>
-                    <p class="textoLogin">Caso ja tenha uma conta,clique aqui embaixo</p>
+                    <p class="textoLogin">Caso ja tenha uma conta, clique aqui embaixo</p>
 
-                    <a href="login.html"><button class="botoesCadastroLogin">Login</button></a>
+                    <div class="botoesCadastroLogin">
+                        <a href="login.html"><button onclick="logar()" id="botaoLogin">Login</button></a>
+                    </div>
+
                 </div>
 
                 <div class="colunaCadastro">
                     <h2 class="tituloCadastro">Cadastrar - se</h2>
                     <div class="form">
                         <label class="label-input" for="">
-                            <i class="far fa-user icon-modify"></i>
-                            <input id="nome_input" type="text" placeholder="Nome">
+
+                            <input id="nome_input" type="text" placeholder="Nome"><br>
                         </label>
 
                         <label class="label-input" for="">
-                            <i class="far fa-envelope icon-modify"></i>
-                            <input id="email_input" type="email" placeholder=" E-mail">
+
+                            <input id="email_input" type="email" placeholder=" E-mail"><br>
                         </label>
 
                         <label class="label-input" for="">
-                            <i class="far fa-envelope icon-modify"></i>
-                            <input id="confirmacao_email_input" type="email" placeholder=" Confirmar E-mail">
+
+                            <input id="confirmacao_email_input" type="email" placeholder=" Confirmar E-mail"><br>
                         </label>
 
                         <label class="label-input" for="">
-                            <i class="fas fa-lock icon-modify"></i>
-                            <input id="senha_input" type="password" placeholder="Senha">
+
+                            <input id="senha_input" type="password" placeholder="Senha"><br>
                         </label>
 
                         <label class="label-input" for="">
-                            <i class="fas fa-lock icon-modify"></i>
-                            <input id="confirmacao_senha_input" type="password" placeholder="Confirmar senha">
+                            <input id="confirmacao_senha_input" type="password" placeholder="Confirmar senha"><br>
                         </label>
 
                     </div>
-                    <button onclick="cadastrar()" class="btn btn-second">Criar</button>
+                    <div class="botoesCadastroLogin">
+                        <button onclick="cadastrar()">Criar</button>
+                    </div>
+
                 </div>
                 <div id="div_aguardar" class="loading-div">
                     <!-- <img src="assets/imgs/colocarGif" id="loading-gif"> -->
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div id="redeSocial">
+
+            <a class="imgRedes" href="https://github.com/GabriellaSierra"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" /></a>
+
+            <a class="imgRedes"  href="https://www.linkedin.com/in/gabriella-sierra-fossaluza-a60658225/"><img id="imgLinkedin" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg" /></a>
+
+        </div>
+        <div class="logoEtitulo">
+
+            <img src="assets/img/IconeSite-removebg-preview.png">
+            <h2>Testes do Vale</h2>
+
         </div>
     </div>
 </body>

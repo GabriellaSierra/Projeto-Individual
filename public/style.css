@@ -6,9 +6,9 @@ html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     margin: 0;
-} 
+}
 
 .header {
     position: relative;
@@ -35,6 +35,7 @@ body{
     display: flex;
     align-items: end;
     justify-content: space-between;
+    
 }
 
 .botoesCadastroLogin button {
@@ -58,13 +59,13 @@ button:hover {
     color: #fff;
 }
 
-#navBar{
+#navBar {
     margin-top: 80px;
     list-style: none;
     display: flex;
 }
 
-#navBar li{
+#navBar li {
     margin: 10px;
 }
 
@@ -75,32 +76,33 @@ button:hover {
     transition: 0.5s;
 }
 
-#navBar li a:hover{
+#navBar li a:hover {
     color: #fff;
 }
 
-#div_bannerJogo{  
-    position: relative;  
+#div_bannerJogo {
+    position: relative;
     height: 2000px;
     display: flex;
     align-items: center;
     align-content: center;
     justify-content: center;
 }
-#div_bannerJogo #bg{
+
+#div_bannerJogo #bg {
     height: 2000px;
     object-fit: fill;
     display: flex;
 }
 
-#caixaTexto{
+#caixaTexto {
     top: 10%;
     left: 25%;
     position: absolute;
     z-index: 3;
     width: 50%;
     height: 40%;
-    background:linear-gradient(180deg, rgba(255, 255, 255, 0.60) 0%, rgba(255, 255, 255, 0.40) 50%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.60) 0%, rgba(255, 255, 255, 0.40) 50%, rgba(255, 255, 255, 0) 100%);
     border-radius: 10px;
     text-align: center;
     display: flex;
@@ -122,13 +124,13 @@ button:hover {
 #containerP {
     overflow-y: auto;
     height: 400px;
-    
+
 }
 
 #imagemCriador {
     margin-right: 10px;
-    
-    
+
+
 }
 
 #imagemCriador img {
@@ -145,7 +147,7 @@ button:hover {
     width: fit-content;
     display: flex;
     justify-content: center;
-    
+
 }
 
 #containerLogo img {
@@ -157,14 +159,14 @@ button:hover {
     justify-self: center;
 }
 
-#caixaTextoJogo{
+#caixaTextoJogo {
     top: 65%;
     left: 25%;
     position: absolute;
     z-index: 3;
     width: 50%;
     height: 30%;
-    background:linear-gradient(360deg, rgba(255, 255, 255, 0.60) 0%, rgba(255, 255, 255, 0.40) 50%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(360deg, rgba(255, 255, 255, 0.60) 0%, rgba(255, 255, 255, 0.40) 50%, rgba(255, 255, 255, 0) 100%);
     border-radius: 10px;
     text-align: center;
     display: flex;
@@ -180,7 +182,7 @@ button:hover {
     justify-content: space-betweens;
     margin: 25px;
     margin-top: 7%;
-    
+
 }
 
 #containerTextoJogo p {
@@ -191,7 +193,7 @@ button:hover {
 
 #imagemJogo {
     margin-right: 10px;
-    
+
 }
 
 #imagemJogo img {
@@ -201,14 +203,14 @@ button:hover {
     border-radius: 15px;
 }
 
-.footer{
+.footer {
     display: flex;
     background-color: #a5bce4;
     justify-content: space-between;
 
 }
 
-.footer img{
+.footer img {
     width: 80px;
     height: 90px;
     margin-left: 55px;
@@ -220,17 +222,17 @@ button:hover {
     justify-content: center;
 }
 
-#redeSocial{
+#redeSocial {
     display: flex;
     align-items: center;
 }
 
-.imgRedes img{
+.imgRedes img {
     width: 60px;
     margin-left: 20px;
 }
 
-#imgLinkedin{
+#imgLinkedin {
     width: 50px;
 }
 
@@ -242,13 +244,13 @@ button:hover {
     background-color: beige;
 }
 
-.textoCriadora{
+.textoCriadora {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#imgCriadora{
+#imgCriadora {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -272,11 +274,63 @@ button:hover {
     font-size: 120%;
 }
 
-.arbustos{
+.arbustos {
     margin: 0px;
 }
 
-.arbustos img{
+.arbustos img {
     width: 300px;
     margin: 0px;
+}
+
+.container{
+    background-color: beige;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cadastroLogin {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.colunaLogin {
+    display: flex;
+    width: 500px;
+    height: 600px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #709ae3;
+    border-radius: 40px 0px 0px 40px;
+    box-shadow: 10px 5px 5px gray;
+}
+
+.colunaCadastro{
+    display: flex;
+    width: 500px;
+    height: 600px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 0px 40px 40px 0px;
+    box-shadow: 10px 5px 5px gray;
+}
+
+#botaoLogin{
+    background-color: #fff;
+}
+
+input{
+    border-radius: 40px;
+    background-color: #a5bce4;
+    width: 300px;
+    height: 50px;
+    margin-top: 5px;
+    border: #a5bce4 solid 1px;
 }
