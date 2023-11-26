@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Testes do Vale</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logoEtitulo">
+
+            <img src="assets/img/IconeSite-removebg-preview.png">
+            <h2>Testes do Vale</h2>
+
+        </div>
+        <div>
+            <ul id="navBar">
+                <li><a href="index.html#containerTextoCriador">Sobre o Criador</a></li>
+                <li><a href="index.html#containerTextoJogo">Sobre o Jogo</a></li>
+                <li><a href="sobreMim.html">Sobre mim</a></li>
+                <li><a href="">Faça o teste</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="alerta_erro">
+        <div class="card_erro" id="cardErro">
+            <span id="mensagem_erro"></span>
+        </div>
+
+        <div class="container">
+            <div class="cadastroLogin">
+                <div class="colunaLogin">
+                    <h2 class="tituloLogin">Olá, fazendeiro!</h2>
+                    <p class="textoLogin">Caso ja tenha uma conta,clique aqui embaixo</p>
+
+                    <a href="login.html"><button class="botoesCadastroLogin">Login</button></a>
+                </div>
+
+                <div class="colunaCadastro">
+                    <h2 class="tituloCadastro">Cadastrar - se</h2>
+                    <div class="form">
+                        <label class="label-input" for="">
+                            <i class="far fa-user icon-modify"></i>
+                            <input id="nome_input" type="text" placeholder="Nome">
+                        </label>
+
+                        <label class="label-input" for="">
+                            <i class="far fa-envelope icon-modify"></i>
+                            <input id="email_input" type="email" placeholder=" E-mail">
+                        </label>
+
+                        <label class="label-input" for="">
+                            <i class="far fa-envelope icon-modify"></i>
+                            <input id="confirmacao_email_input" type="email" placeholder=" Confirmar E-mail">
+                        </label>
+
+                        <label class="label-input" for="">
+                            <i class="fas fa-lock icon-modify"></i>
+                            <input id="senha_input" type="password" placeholder="Senha">
+                        </label>
+
+                        <label class="label-input" for="">
+                            <i class="fas fa-lock icon-modify"></i>
+                            <input id="confirmacao_senha_input" type="password" placeholder="Confirmar senha">
+                        </label>
+
+                    </div>
+                    <button onclick="cadastrar()" class="btn btn-second">Criar</button>
+                </div>
+                <div id="div_aguardar" class="loading-div">
+                    <!-- <img src="assets/imgs/colocarGif" id="loading-gif"> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function cadastrar() {
+        aguardar();
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = nomeFantasia_input.value;
+        var emailVar = email_input.value;
+        var confirmacaoEmailVar = confirmacao_email_input.value;
+        var senhaVar = senha_input.value;
+        var confirmacaoSenhaVar = confirmacao_senha_input.value;
+        if (
+            nomeVar == "" ||
+            emailVar == "" ||
+            confirmacaoEmailVar == "" ||
+            senhaVar == "" ||
+            confirmacaoSenhaVar == ""
+        ) {
+
+            cardErro.style.display = "block";
+            mensagem_erro.innerHTML =
+                "(Mensagem de erro para todos os campos em branco)";
+
+            finalizarAguardar();
+            return false;
+
+        } else if (nomeVar.length <= 1) {
+            cardErro.style.display = "block";
+            mensagem_erro.innerHTML =
+                "(Insira um nome maior que 1 letra)";
+            finalizarAguardar();
+            return false;
+
+        } else if (senhaVar.length < 6) {
+            cardErro.style.display = "block";
+            mensagem_erro.innerHTML =
+                "(Senha deve ser maior ou igual a 6 digitos)";
+            finalizarAguardar();
+            return false;
+
+        } else if (senhaVar != confirmacaoSenhaVar) {
+            cardErro.style.display = "block";
+            mensagem_erro.innerHTML =
+                "(Senhas diferentes)";
+            finalizarAguardar();
+            return false;
+
+        } else if (emailVar != confirmacaoEmailVar) {
+            cardErro.style.display = "block";
+            mensagem_erro.innerHTML =
+                "(Os E-mails não coincidem)";
+            finalizarAguardar();
+            return false;
+        } else {
+            setInterval(sumirMensagem, 5000);
+        }
+    }
+</script>
+
+</html>
