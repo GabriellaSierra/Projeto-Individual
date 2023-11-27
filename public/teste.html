@@ -30,95 +30,264 @@
             <a href="login.html"><button onclick="login()"> Login </button></a>
         </div>
     </div>
+    <div class="fundoCard">
+        
+    </div>
     <div class="card">
         <div class="card-quiz">
             <div id="quiz-container">
                 <h1>Quiz</h1>
                 <form id="quiz-form">
-                    <div class="campo">
-                        <label for="q1">1. Qual o nome da vila onde se passa o jogo? </label><br>
-                        <input type="radio" name="q1" value="errado">
-                        Vila do Vale<br>
-                        <input type="radio" name="q1" value="certo">
-                        Vila Pelicanos<br>
-                        <input type="radio" name="q1" value="errado">
-                        Vila dos Pescadores
+                    <div class="perguntas">
+                        <h3>1. Qual o nome da vila onde se passa o jogo?</h3>
+                        <div class="alternativas">
+                            <label class="alternativa">
+                                <input type="radio" name="opcao" id="opcao1" value="errado">
+                                <span>Vila do Vale</span>
+                            </label><br>
+
+                            <label class="alternativa">
+                                <input type="radio" name="opcao" id="opcao2" value="certo">
+                                <span>Vila Pelicanos</span>
+                            </label><br>
+
+                            <label class="alternativa">
+                                <input type="radio" name="opcao" id="opcao3" value="errado">
+                                <span>Vila dos Pescadores</span>
+                            </label>
+
+                        </div>
                     </div><br><br>
-                    <div class="campo">
-                        <label for="q2">2. Quantas frutas estrelas existem no jogo?</label><br>
-                        <input type="radio" name="q2" value="certo"> 7<br>
-                        <input type="radio" name="q2" value="errado"> 8<br>
-                        <input type="radio" name="q2" value="errado"> 6
+
+                    <div class="perguntas">
+                        <h3>2. Quantas frutas estrelas existem no jogo?</h3>
+                        <div class="alternativas">
+                            <label class="alternativa">
+                                <input type="radio" name="opcao" id="opcao4" value="certo"> <br>
+                                <span>7</span>
+                            </label>
+
+                            <label class="alternativa">
+                                <input type="radio" name="opcao" id="opcao5" value="errado"> <br>
+                                <span>8</span>
+                            </label>
+
+                            <label class="alternativa">
+                                <input type="radio" name="opcao" id="opcao6" value="errado">
+                                <span>6</span>
+                            </label>
+
+                        </div>
                     </div><br><br>
-                    <div class="campo">
-                        <label for="q3">3. Qual animal a Marnie te oferece para você adotar, após conseguir a conquista
-                            de 1000 ouros?</label><br>
-                        <input type="radio" name="q3" value="certo"> Gato ou cachorro<br>
-                        <input type="radio" name="q3" value="errado"> Cavalo ou vaca<br>
-                        <input type="radio" name="q3" value="errado"> Um pato
+
+                    <div class="perguntas">
+                        <h3>3. Qual animal a Marnie te oferece para você adotar, após conseguir a conquista
+                            de 1000 ouros?</h3>
+                        <div class="alternativas">
+                            <label class="alternativa">
+                                <input type="radio" name="opcao" id="opcao7" value="certo"> <br>
+                                <span>Gato ou cachorro</span>
+                            </label>
+                            <label class="alternativa">
+                                <input type="radio" name="opcao" id="opcao8" value="errado"> <br>
+                                <span>Cavalo ou vaca</span>
+                            </label>
+                            <label class="alternativa">
+                                <input type="radio" name="opcao" id="opcao9" value="errado">
+                                <span>Um pato</span>
+                            </label>
+
+                        </div>
                     </div><br><br>
-                    <div class="campo">
-                        <label for="q4"> 4. Qual a melhor qualidade de produto?</label><br>
-                        <input type="radio" name="q4" value="errado"> Ouro<br>
-                        <input type="radio" name="q4" value="certo"> Irídio<br>
-                        <input type="radio" name="q4" value="errado"> Diamante
+
+                    <div class="perguntas">
+                        <h3>4. Qual a melhor qualidade de produto?</h3>
+                        <div class="alternativas">
+                            <label class="alternativa">
+                                <input type="radio" name="opcao" id="opcao10" value="errado"> <br>
+                                <span>Ouro</span>
+                            </label>
+
+                            <label class="alternativa">
+                                <input type="radio" name="opcao" id="opcao11" value="certo"> <br>
+                                <span>Irídio</span>
+                            </label>
+
+                            <label class="alternativa">
+                                <input type="radio" name="opcao" id="opcao12" value="errado">
+                                <span>Diamante</span>
+                            </label>
+
+                        </div>
                     </div><br><br>
-                    <div class="campo">
-                        <label for="q5">5. Qual a maionese que mais vale?</label><br>
-                        <input type="radio" name="q5" value="errado">Ovo de pata<br>
-                        <input type="radio" name="q5" value="errado"> Ovo nulo<br>
-                        <input type="radio" name="q5" value="certo"> Ovo de dinossauro
+
+                    <div class="perguntas">
+                        <h3>5. Qual a maionese que mais vale?</h3>
+                        <div class="alternativas">
+                            <label class="alternativa">
+                                <input type="radio" name="opcao" id="opcao13" value="errado"> <br>
+                                <span>De ovo de pata</span>
+                            </label>
+
+                            <label class="alternativa">
+                                <input type="radio" name="opcao" id="opcao14" value="errado"> <br>
+                                <span>De ovo nulo</span>
+                            </label>
+
+                            <label class="alternativa">
+                                <input type="radio" name="opcao" id="opcao15" value="certo">
+                                <span>De ovo de dinossauro</span>
+                            </label>
+
+                        </div>
                     </div><br><br>
-                    <div class="campo">
-                        <label for="q6">6. A Abigail gosta de comer algo peculiar, o que é?</label><br>
-                        <input type="radio" name="q6" value="errado">Açucar<br>
-                        <input type="radio" name="q6" value="errado">Inhame da neve<br>
-                        <input type="radio" name="q6" value="certo">Ametista
+
+                    <div class="perguntas">
+                        <h3>6. A Abigail gosta de comer algo peculiar, o que é?</h3>
+                        <div class="alternativas">
+                            <label class="alternativa">
+                                <input type="radio" name="opcao" id="opcao16" value="errado"> <br>
+                                <span>Açúcar</span>
+                            </label>
+                            <label class="alternativa">
+                                <input type="radio" name="opcao" id="opcao17" value="errado"> <br>
+                                <span>Inhame da neve</span>
+                            </label>
+                            <label class="alternativa">
+                                <input type="radio" name="opcao" id="opcao18" value="certo">
+                                <span>Ametista</span>
+                            </label>
+
+                        </div>
                     </div><br><br>
-                    <div class="campo">
-                        <label for="q7">7. Qual objeto que o prefeito perde, que encontramos dentro do quarto da
-                            Marnie?</label><br>
-                        <input type="radio" name="q7" value="errado"> Uma pá dourada<br>
-                        <input type="radio" name="q7" value="certo"> Seu shorts roxo<br>
-                        <input type="radio" name="q7" value="errado"> Uma minhoca viva
+
+                    <div class="perguntas">
+                        <h3>7. Qual objeto que o prefeito perde, que encontramos dentro do quarto da
+                            Marnie?</h3>
+                        <div class="alternativas">
+                            <label class="alternativa">
+                                <input type="radio" name="opcao" id="opcao19" value="errado"> <br>
+                                <span>Uma pá dourada</span>
+                            </label>
+
+                            <label class="alternativa">
+                                <input type="radio" name="opcao" id="opcao20" value="certo"> <br>
+                                <span>Seu shorts roxo</span>
+                            </label>
+
+                            <label class="alternativa">
+                                <input type="radio" name="opcao" id="opcao21" value="errado">
+                                <span>Uma minhoca viva</span>
+                            </label>
+
+                        </div>
                     </div><br><br>
-                    <div class="campo">
-                        <label for="q8">8. Qual o nome do personagem que mora nos esgotos da vila?</label><br>
-                        <input type="radio" name="q8" value="certo">Krobus<br>
-                        <input type="radio" name="q8" value="errado">Anão<br>
-                        <input type="radio" name="q8" value="errado">Linus
+
+                    <div class="perguntas">
+                        <h3>8. Qual o nome do personagem que mora nos esgotos da vila?</h3>
+                        <div class="alternativas">
+                            <label class="alternativa">
+                                <input type="radio" name="opcao" id="opcao22" value="certo"> <br>
+                                <span>Krobus</span>
+                            </label>
+                            <label class="alternativa">
+                                <input type="radio" name="opcao" id="opcao23" value="errado"> <br>
+                                <span>Anão</span>
+                            </label>
+                            <label class="alternativa">
+                                <input type="radio" name="opcao" id="opcao24" value="errado">
+                                <span>Linus</span>
+                            </label>
+
+                        </div>
                     </div><br><br>
-                    <div class="campo">
-                        <label for="q9">9. Qual desses é um dos Amores Universais?</label><br>
-                        <input type="radio" name="q9" value="errado"> Diamante<br>
-                        <input type="radio" name="q9" value="certo"> Abóbora dourada<br>
-                        <input type="radio" name="q9" value="errado"> Essência nula
-                        <div class="campo">
-                        </div><br><br>
-                        <label for="q10">10. Quantos andares tem a mina?</label><br>
-                        <input type="radio" name="q10" value="errado">100<br>
-                        <input type="radio" name="q10" value="errado"> 150<br>
-                        <input type="radio" name="q10" value="certo"> 120
+
+                    <div class="perguntas">
+                        <h3>9. Qual desses é um dos Amores Universais?</h3>
+                        <div class="alternativas">
+                            <label class="alternativa">
+                                <input type="radio" name="opcao" id="opcao25" value="errado"> <br>
+                                <span>Diamante</span>
+                            </label>
+                            <label class="alternativa">
+                                <input type="radio" name="opcao" id="opcao26" value="certo"> <br>
+                                <span>Abóbora dourada</span>
+                            </label>
+                            <label class="alternativa">
+                                <input type="radio" name="opcao" id="opcao27" value="errado">
+                                <span>Essência nula</span>
+                            </label>
+
+
+                        </div>
                     </div><br><br>
-                    <button type="button" onclick="verificarRespostas()">Verificar Respostas</button>
+
+                    <div class="perguntas">
+                        <h3>10. Quantos andares tem a mina?</h3>
+                        <div class="alternativas">
+                            <label class="alternativa">
+                                <input type="radio" name="opcao" id="opcao28" value="errado"> <br>
+                                <span>100</span>
+                            </label>
+                            <label class="alternativa">
+                                <input type="radio" name="opcao" id="opcao29" value="errado"> <br>
+                                <span>150</span>
+                            </label>
+                            <label class="alternativa">
+                                <input type="radio" name="opcao" id="opcao30" value="certo">
+                                <span>120</span>
+                            </label>
+
+                        </div>
+                    </div><br><br>
+
+                    <div id="botaoRespostas">
+                        <button type="button" onclick="verificarRespostas()">Verificar Respostas</button>
+                    </div>
+                    
                 </form>
 
-                <div id="result">
-                    <h2>Resultado do Quiz</h2>
-                    <a href="dashboard.html"><button onclick="levarDashboard()">Ir para página de usuário</button></a>
+                <div class="resultado">
+                    <div id="result">
+                        <h2>Resultado do Quiz</h2>
+
+                    </div>
+                    <div id="botaoVoltar">
+                        <a href="dashboard.html"><button onclick="levarDashboard()">Ir para página de
+                                usuário</button></a>
+                    </div>
                 </div>
+
             </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div id="redeSocial">
+
+            <a class="imgRedes" href="https://github.com/GabriellaSierra"><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" /></a>
+
+            <a class="imgRedes" href="https://www.linkedin.com/in/gabriella-sierra-fossaluza-a60658225/"><img
+                    id="imgLinkedin"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg" /></a>
+
+        </div>
+        <div class="logoEtitulo">
+
+            <img src="assets/img/IconeSite-removebg-preview.png">
+            <h2>Testes do Vale</h2>
+
         </div>
     </div>
 </body>
 <script>
     function verificarRespostas() {
-    
+
         const respostasCorretas = ["certo", "certo", "certo", "certo", "certo", "certo", "certo", "certo", "certo", "certo"];
         const respostasUsuario = [];
 
         for (let i = 1; i <= 10; i++) {
-            const resposta = document.querySelector(`input[name="q${i}"]:checked`);
+            const resposta = document.querySelector(`input[name="opcao"]:checked`);
             if (resposta) {
                 respostasUsuario.push(resposta.value);
             } else {

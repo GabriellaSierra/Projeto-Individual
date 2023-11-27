@@ -410,3 +410,105 @@ input{
     flex-direction: column;
     align-items: center;
 }
+
+#quiz-form{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.campo{
+    display: flex;
+    align-items: center;
+}
+
+.card{
+    margin-left: 35%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    border: #709ae3 solid 10px;
+    border-radius: 40px;
+    width: 500px;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: #a5bce4;
+}
+
+.card .card-quiz #quiz-container label {
+    color: black;
+    justify-content: center;
+}
+
+#quiz-form{
+    display: flex;
+    flex-direction: column;
+}
+
+#quiz-container button{
+    background-color: #fff;
+    border: #709ae3 solid 3px;
+    color: #709ae3;
+    border-radius: 50px;
+    margin: 10px;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    position: relative;
+    display: block;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.campo{
+    display: flex;
+    align-items: center;
+}
+
+.perguntas{
+    margin-bottom: 20px;
+}
+
+.alternativas{
+    display: flex;
+    flex-direction: column;
+}
+
+.alternativa{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+span{
+    margin-right: 10px;
+}
+
+input[type="radio"] {
+    display: flex;
+    width: 20px;
+    
+    
+}
+
+#botaoRespostas{
+    display: flex;
+    justify-content: center;
+}
+
+.resultado{
+    display: block;
+}
+
+#result{
+    display: flex;
+    justify-content: center;
+}
+
+#botaoVoltar{
+    display: flex;
+    justify-content: center;
+}
