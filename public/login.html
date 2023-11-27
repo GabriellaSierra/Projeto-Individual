@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Testes do Vale</title>
 </head>
+
 <body>
     <div class="header">
         <div class="logoEtitulo">
@@ -16,13 +18,62 @@
         </div>
         <div>
             <ul id="navBar">
-                <li><a href="#containerTextoCriador">Sobre o Criador</a></li>
-                <li><a href="#containerTextoJogo">Sobre o Jogo</a></li>
+                <li><a href="index.html#containerTextoCriador">Sobre o Criador</a></li>
+                <li><a href="index.html#containerTextoJogo">Sobre o Jogo</a></li>
                 <li><a href="sobreMim.html">Sobre mim</a></li>
                 <li><a href="">Faça o teste</a></li>
             </ul>
         </div>
     </div>
-    
+    <div class="alerta_erro">
+        <div class="card_erro" id="cardErro">
+            <span id="mensagem_erro"></span>
+        </div>
+        <div class="container">
+            <div class="cadastroLogin">
+                <div class="colunaCadastro">
+
+                    <h2 class="tituloCadastro">Bem vindo de volta, fazendeiro!</h2>
+                    <p class="textoCadastro">Caso não tenha uma conta, clique aqui</p>
+
+                    <div class="botoesCadastroLogin">
+                        <a href="cadastro.html"><button>Cadastre-se</button></a>
+
+                    </div>
+
+                </div>
+
+                <div class="colunaLogin">
+                    <h2 class="tituloLogin">Login</h2>
+                    <div class="form">
+                        <label class="label-input" for="">
+                            <input id="input_email" type="email" placeholder="Email">
+
+                        </label>
+
+                        <label class="label-input" for="">
+                            <input id="input_senha" type="password" placeholder="Senha">
+
+                        </label>
+
+                        <div class="botoesCadastroLogin">
+                            <button onclick="entrar()">login</button>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
+<script>
+    function entrar() {
+
+        var emailVar = input_email.value;
+        var senhaVar = input_senha.value;
+    }
+</script>
+
 </html>
