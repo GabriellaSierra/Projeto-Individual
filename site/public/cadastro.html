@@ -101,8 +101,6 @@
     function cadastrar() {
         aguardar();
 
-        //Recupere o valor da nova input pelo nome do id
-        // Agora vá para o método fetch logo abaixo
         var nomeVar = nomeFantasia_input.value;
         var emailVar = email_input.value;
         var confirmacaoEmailVar = confirmacao_email_input.value;
@@ -143,6 +141,14 @@
                 "(Senhas diferentes)";
             finalizarAguardar();
             return false;
+        
+        }else if (emailVar.indexOf("@") == -1 && emailVar.indexOf(".com") == -1){
+
+            cardErro.style.display = "block";
+            mensagem_erro.innerHTML =
+                "(E-mail incorreto)";
+            finalizarAguardar();
+            return false;
 
         } else if (emailVar != confirmacaoEmailVar) {
             cardErro.style.display = "block";
@@ -153,6 +159,10 @@
         } else {
             setInterval(sumirMensagem, 5000);
         }
+        
+        
+        
+        
     }
 </script>
 
