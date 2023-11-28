@@ -85,9 +85,12 @@
     <div class="footer">
         <div id="redeSocial">
 
-            <a class="imgRedes" href="https://github.com/GabriellaSierra"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" /></a>
+            <a class="imgRedes" href="https://github.com/GabriellaSierra"><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" /></a>
 
-            <a class="imgRedes"  href="https://www.linkedin.com/in/gabriella-sierra-fossaluza-a60658225/"><img id="imgLinkedin" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg" /></a>
+            <a class="imgRedes" href="https://www.linkedin.com/in/gabriella-sierra-fossaluza-a60658225/"><img
+                    id="imgLinkedin"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg" /></a>
 
         </div>
         <div class="logoEtitulo">
@@ -100,8 +103,9 @@
 </body>
 <script>
     function cadastrar() {
-        aguardar();
+        //aguardar();
 
+        var fkTesteVar = 1;
         var nomeVar = nome_input.value;
         var emailVar = email_input.value;
         var confirmacaoEmailVar = confirmacao_email_input.value;
@@ -142,8 +146,8 @@
                 "(Senhas diferentes)";
             finalizarAguardar();
             return false;
-        
-        }else if (emailVar.indexOf("@") == -1 && emailVar.indexOf(".com") == -1){
+
+        } else if (emailVar.indexOf("@") == -1 && emailVar.indexOf(".com") == -1) {
 
             cardErro.style.display = "block";
             mensagem_erro.innerHTML =
@@ -158,51 +162,52 @@
             finalizarAguardar();
             return false;
         } else {
-        
+
         }
-        
-            // Enviando o valor da nova input
-    fetch("/usuarios/cadastrar", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-    
-        nomeServer: nomeVar,
-        emailServer: emailVar,
-        senhaServer: senhaVar,
-      }),
-    })
-      .then(function (resposta) {
-        console.log("resposta: ", resposta);
 
-        if (resposta.ok) {
-          cardErro.style.display = "block";
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
 
-          mensagem_erro.innerHTML =
-            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+                nomeServer: nomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar,
+                fkTesteServer: fkTesteVar
+            }),
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
 
-          setTimeout(() => {
-            window.location = "login.html";
-          }, "2000");
+                if (resposta.ok) {
+                    cardErro.style.display = "block";
 
-          limparFormulario();
-          finalizarAguardar();
-        } else {
-          throw "Houve um erro ao tentar realizar o cadastro!";
-        }
-      })
-      .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-        finalizarAguardar();
-      });
+                    mensagem_erro.innerHTML =
+                        "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
-    return false;
-  }
+                    setTimeout(() => {
+                        window.location = "login.html";
+                    }, "2000");
+
+                    limparFormulario();
+                    finalizarAguardar();
+                } else {
+                    throw "Houve um erro ao tentar realizar o cadastro!";
+                }
+            })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+                finalizarAguardar();
+            });
+
+        return false;
+    }
 
 
-    
+
 </script>
 
 </html>

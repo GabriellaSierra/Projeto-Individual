@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/sessao.js"></script>
+    <title>Testes do Vale</title>
 </head>
 <body>
 
@@ -26,6 +28,9 @@
         <div class="botoesCadastroLogin">
             <a href="cadastro.html"><button onclick="cadastro()"> Cadastrar-se </button></a><br>
             <a href="login.html"><button onclick="login()"> Login </button></a>
+            <div class="btn-logout" onclick="limparSessao()">
+                <h3>Sair</h3>
+            </div>
         </div>
     </div>
 </body>
