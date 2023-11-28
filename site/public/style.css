@@ -31,6 +31,14 @@ body {
     margin-left: 55px;
 }
 
+.card_erro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: beige;
+}
+
 .botoesCadastroLogin {
     display: flex;
     align-items: end;
@@ -500,15 +508,23 @@ input[type="radio"] {
 }
 
 .resultado{
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 #result{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 #botaoVoltar{
     display: flex;
     justify-content: center;
+}
+
+.dashboard{
+    display: flex;
+    background-color: beige;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,8 @@
     <script src="js/sessao.js"></script>
     <title>Testes do Vale</title>
 </head>
-<body>
+
+<body onload="atualizarTop(sessionStorage.ID_USUARIO)">
 
     <div class="header">
         <div class="logoEtitulo">
@@ -26,6 +28,9 @@
             </ul>
         </div>
         <div class="botoesCadastroLogin">
+            <div id="userName">
+
+            </div>
             <a href="cadastro.html"><button onclick="cadastro()"> Cadastrar-se </button></a><br>
             <a href="login.html"><button onclick="login()"> Login </button></a>
             <div class="btn-logout" onclick="limparSessao()">
@@ -33,5 +38,158 @@
             </div>
         </div>
     </div>
+    <div class="dashboard">
+        <div id="feedContainer">
+
+        </div>
+
+        <div class="canva">
+            <canvas id="grafico">
+
+            </canvas>
+
+        </div>
+
+    </div>
+    <div class="footer">
+        <div id="redeSocial">
+
+            <a class="imgRedes" href="https://github.com/GabriellaSierra"><img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" /></a>
+
+            <a class="imgRedes" href="https://www.linkedin.com/in/gabriella-sierra-fossaluza-a60658225/"><img
+                    id="imgLinkedin"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg" /></a>
+
+        </div>
+        <div class="logoEtitulo">
+
+            <img src="assets/img/IconeSite-removebg-preview.png">
+            <h2>Testes do Vale</h2>
+
+        </div>
+    </div>
+
 </body>
+<script>
+
+    function search() {
+        var text = document.getElementById("search").value;
+        const tr = document.getElementsByTagName("tr").value;
+        for (let i = 1; i < tr.length; i++) {
+            if (!tr[i].children[1].children[1].innerHTML.toLowerCase().includes(
+                text.toLowerCase()
+            )) {
+                tr[i].style.display = 'none';
+
+            }
+            else {
+                tr[i].style.display = '';
+            }
+        }
+    }
+</script>
+<script>
+    userName.innerHTML = ` Olá,  ` + sessionStorage.NOME_USUARIO;
+    function atualizarTop(ID_USUARIO) {
+        fetch(`/avisos/listar/${ID_USUARIO}`).then(function (resposta) {
+            if (resposta.ok) {
+                if (resposta.status == 204) {
+                    var feed = document.getElementById("feedContainer");
+                    var mensagem = document.createElement("span");
+                    mensagem.innerHTML = "Nenhum resultado encontrado."
+                    feed.appendChild(mensagem);
+                    throw "Nenhum resultado encontrado!!";
+                }
+
+                resposta.json().then(function (resposta) {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+
+                    var feed = document.getElementById("feedContainer");
+                    feed.innerHTML = "";
+                    for (let i = 0; i < resposta.length; i++) {
+                        var publicacao = resposta[i];
+
+                        var divPublicacao = document.createElement("div");
+                        var spanID = document.createElement("span");
+                        var spanNome = document.createElement("span");
+                        var spanTitulo = document.createElement("span");
+                        var espaco = document.createElement("br");
+
+
+                        spanID.innerHTML = "Nome: <b>" + publicacao.nome + "</b>";
+                        spanTitulo.innerHTML = "Points: <b>" + publicacao.total_pontos + "</b>";
+
+                        divPublicacao.className = "publicacao";
+                        spanNome.className = "publicacao-nome";
+                        spanTitulo.className = "publicacao-titulo";
+
+
+                        divPublicacao.appendChild(spanID);
+                        divPublicacao.appendChild(spanTitulo);
+                        feed.appendChild(divPublicacao);
+                        feed.appendChild(espaco)
+                    }
+
+                });
+            } else {
+                throw ('Houve um erro na API!');
+            }
+        }).catch(function (resposta) {
+            console.error(resposta);
+        });
+        
+        fetch(`/avisos/listar`).then(function (resposta) {
+            if (resposta.ok) {
+                if (resposta.status == 204) {
+                    var feed = document.getElementById("feedContainer");
+                    var mensagem = document.createElement("span");
+                    mensagem.innerHTML = "Nenhum resultado encontrado."
+                    feed.appendChild(mensagem);
+                    throw "Nenhum resultado encontrado!!";
+                }
+
+                resposta.json().then(function (resposta) {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+
+                    var qtdQuiz = [];
+                    var diaQuiz = [];
+                    console.log(resposta);
+                    for (let i = 0; i < resposta.length; i++) {
+                        qtdQuiz.push(resposta[i].qtdTeste)
+                        diaQuiz.push(resposta[i].dataTeste.substring(0,10))
+
+
+                    }
+
+                    const data = {
+                        labels: diaQuiz,
+                        datasets: [{
+                            label: 'Quantidade de Quiz respondido por dia',
+                            data: qtdQuiz,
+                            fill: false,
+                            borderColor: '#709ae3',
+                            backgroundColor: '#a5bce4',
+                            tension: 0.1
+                        }]
+                    };
+
+                    const config = {
+                        type: 'line',
+                        data: data,
+                    };
+
+                    new Chart(grafico, config);
+                });
+            } else {
+                throw ('Houve um erro na API!');
+            }
+        }).catch(function (resposta) {
+            console.error(resposta);
+        });
+    }
+    
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </html>

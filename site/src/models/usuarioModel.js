@@ -25,6 +25,7 @@ function cadastrar(nome, email, senha, fkTeste) {
 
 
 
+
 module.exports = {
     autenticar,
     cadastrar,

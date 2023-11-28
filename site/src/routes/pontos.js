@@ -3,9 +3,12 @@ var router = express.Router();
 
 var pontosController = require("../controllers/pontosController");
 
-//Recebendo os dados do html e direcionando para a função cadastrar de usuarioController.js
 router.post("/verificarRespostas", function (req, res) {
     pontosController.verificarRespostas(req, res);
+})
+
+router.get("/buscarPontos", function(req, res) {
+    pontosController.buscarPontos(req, res);
 })
 
 module.exports = router;
