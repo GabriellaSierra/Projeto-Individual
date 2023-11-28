@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="js/sessao.js"></script>
     <title>Testes do Vale</title>
 </head>
 
@@ -101,7 +102,7 @@
     function cadastrar() {
         aguardar();
 
-        var nomeVar = nomeFantasia_input.value;
+        var nomeVar = nome_input.value;
         var emailVar = email_input.value;
         var confirmacaoEmailVar = confirmacao_email_input.value;
         var senhaVar = senha_input.value;
@@ -157,13 +158,51 @@
             finalizarAguardar();
             return false;
         } else {
-            setInterval(sumirMensagem, 5000);
+        
         }
         
-        
-        
-        
-    }
+            // Enviando o valor da nova input
+    fetch("/usuarios/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+    
+        nomeServer: nomeVar,
+        emailServer: emailVar,
+        senhaServer: senhaVar,
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+          cardErro.style.display = "block";
+
+          mensagem_erro.innerHTML =
+            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+          setTimeout(() => {
+            window.location = "login.html";
+          }, "2000");
+
+          limparFormulario();
+          finalizarAguardar();
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        finalizarAguardar();
+      });
+
+    return false;
+  }
+
+
+    
 </script>
 
 </html>
