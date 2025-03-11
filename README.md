@@ -1,0 +1,1 @@
+Este foi o meu primeiro projeto feito completamente sozinha, para um trabalho final do primeiro semestre da faculdade. Feito em JavaScript, HTML e CSS, usamos nossos apredizados para aplicar uma API própria da faculdade para KPI's e aplicação com banco de dados MySQL
